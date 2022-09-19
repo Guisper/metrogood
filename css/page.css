@@ -1,0 +1,243 @@
+/* 第一页 */
+#page1 {
+  background: url(../img/bg1.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+#page1 div {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.65);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#page1 div p {
+  font-family: 'YouYuan';
+  margin: 0;
+  font-size: 100px;
+  font-weight: bolder;
+  color: rgb(81, 128, 100);
+}
+
+#page1 div span {
+  color: #084d22;
+}
+
+/* 第二页 */
+
+#page2 .mapBox>.container>div {
+  width: 100%;
+  height: calc(100vh - 70px);
+  box-shadow: 0 0 20px rgb(0 0 0 / 5%);
+  background-color: white;
+}
+
+/* 第三页 */
+#page3 {
+  position: relative;
+  background-color: #e1eae6;
+  height: 100% !important;
+}
+
+#page3 .title {
+  position: absolute;
+  left: 15px;
+}
+
+#page3 .title h2 {
+  color: rgb(31, 121, 67);
+  font-size: 48px;
+  font-weight: bolder;
+  /* font-style: italic; */
+}
+
+#page3 .box {
+  height: 1200px;
+  display: flex;
+  flex-direction: row-reverse;
+  padding: 0 120px;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+#page3 .box .line {
+  width: 10px;
+  height: 100%;
+  background-color: #b9d3c6;
+  position: absolute;
+  left: 50%;
+  margin-left: -5px;
+}
+
+#page3 .box .item {
+  width: 50%;
+}
+
+/* #page3 .box .item:nth-child(odd) {
+  align-self: start;
+}
+
+#page3 .box .item.item:nth-child(2n) {
+  align-self: end;
+} */
+
+
+#page3 .box .item h3 {
+  margin: 0;
+  padding: 0;
+  font-size: 28px;
+  font-weight: 400;
+  text-align: left;
+  color: rgba(8, 77, 35, 1);
+  border-bottom: 10px solid #B2CFC0DB;
+  white-space: nowrap;
+}
+
+#page3 .box .item p {
+  margin: 0;
+  padding: 10px;
+  font-size: 20px;
+  font-weight: 400;
+  text-align: left;
+  color: #6F8F7C;
+}
+
+
+#page4 {
+  position: relative;
+  background-color: #e1eae6;
+}
+
+#page4 .scale {
+  cursor: pointer;
+  transition: .5s;
+}
+
+#page4 .scale:hover {
+  scale: 1.2;
+}
+
+#page4 .title {
+  position: absolute;
+  left: 15px;
+}
+
+#page4 .title h2 {
+  color: #084D23FF;
+  font-size: 48px;
+  font-weight: bolder;
+}
+
+#page4 .box {
+  display: flex;
+  justify-content: space-around;
+  padding-top: 200px;
+}
+
+#page4 .box p {
+  font-size: 28px;
+  font-weight: 600;
+  color: rgba(8, 77, 35, 1);
+}
+
+#page6 {
+  background-color: #d9e8e1;
+  width: 100%;
+}
+
+#page6 h2 {
+  padding: 20px 0 100px;
+  text-align: center;
+  font-size: 28px;
+  font-weight: 800;
+  color: rgba(8, 77, 35, 1);
+}
+
+#page6 .item-box {
+  background: none;
+  box-shadow: none;
+}
+
+
+#page6 .item-box .item {
+  padding: 0 100px;
+  display: column;
+  text-align: left;
+}
+
+#page6 .item-box .item div {
+  width: 100px;
+  padding: 5px;
+  font-size: 28px;
+  font-weight: 600;
+  color: rgba(8, 77, 35, 1);
+  background: #CADAD2FF;
+  border-radius: 10px;
+}
+
+#page6 .item-box .item p {
+  margin-left: 50px;
+  margin-bottom: 80px;
+  font-size: 24px;
+  font-weight: 600;
+  color: rgba(111, 143, 124, 1);
+}
+
+#page6 .item-box .item span {
+  color: #084D23FF;
+}
+
+
+#page7 {
+  position: relative;
+  background-color: #e4eae8;
+}
+
+#page7 .chart {
+  width: 45%;
+  margin: 50px;
+}
+
+#page7 .desc {
+  background: none;
+  box-shadow: none;
+  position: absolute;
+  right: 100px;
+  bottom: -100px;
+  text-align: left;
+  width: 400px;
+  font-size: 30px;
+  font-weight: 600;
+  color: rgba(111, 143, 124, 1);
+}
+
+#page7 span {
+  color: #084D23FF;
+}
+
+#page8 .box {
+  padding-top: 100px;
+}
+
+#page8 #bar3 {
+  width: 70%;
+}
+
+#page8 .desc {
+  margin-top: 50px;
+  background: none;
+  box-shadow: none;
+  text-align: center;
+  font-size: 32px;
+  font-weight: 600;
+  color: rgba(34, 105, 186, 1);
+  width: 400px;
+}
+
+#page8 .desc p {
+  margin: 5px;
+}

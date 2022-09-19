@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Demo</title>
+  <!-- 图表依赖 -->
+  <script type="text/javascript" src="./js/echarts.min.js"></script>
+  <script type="text/javascript" src="./js/echarts-gl.min.js"></script>
+  <!-- 百度地图 -->
+  <script type="text/javascript"
+    src="https://api.map.baidu.com/getscript?v=3.0&ak=00aznPex2EE9U3gmX3fBlprSzobnmwzV"></script>
+  <script type="text/javascript"
+    src="https://fastly.jsdelivr.net/npm/echarts@5.3.3/dist/extension/bmap.min.js"></script>
+  <!-- animate css库 -->
+  <link rel="stylesheet" href="./css/animate.min.css" />
+  <!-- scroll page 依赖 -->
+  <script src="./js/scrollpage.js"></script>
+  <!-- <script type="text/javascript" src="https://unpkg.com/default-passive-events"></script> -->
+  <!-- 样式 -->
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/page.css">
+  <!-- 页面滚动 -->
+  <script src="./js/page.js"></script>
+</head>
+
+<body>
+  <div id="main-page">
+    <div id="page1" class="page-item">
+      <div class="animate__animated animate__fadeInDown animate__delay-1s">
+        <p>地铁</p>
+        <p>创造智能化高效节能生活</p>
+        <p><span>M</span>agic <span>E</span>lectricity <span>T</span>o</p>
+        <p><span>R</span>efine <span>O</span>urself</p>
+      </div>
+    </div>
+    <div id="page2" class="page-item">
+      <div class="mapBox">
+        <h2>中国内地城市地铁里程数和线路数(热力地图)</h2>
+        <div class="container">
+          <div id="mapContainer"></div>
+        </div>
+      </div>
+    </div>
+    <div id="page3" class="page-item">
+      <div class="title">
+        <h2>国家高度重视节能发展</h2>
+      </div>
+      <div class="box">
+        <div class="line"></div>
+        <div class="item">
+          <h3>《2022年全国两会》</h3>
+          <p>
+            有序推进碳达峰工作，落实碳达峰行动方案。推进绿色低碳技术研发和推广应用，建设绿色制造和服务体系。推动能耗”双控”向碳排放总量和强度”双控”转变，完善减污降碳激励约束政策，加快形成绿色生产生活方式。推进科技创新，促进产业优化升级，突破供给约束堵点，依靠创新提高发展质量。
+          </p>
+        </div>
+        <div class="item" style="transform: translateY(200px);">
+          <h3>《中华人民共和国节约能源法》</h3>
+          <p>
+            旨在推动全社会节约能源，提高能源利用率，保护和改善环境，促进经济社会全面协调可持续发展。
+          </p>
+        </div>
+        <div class="item" style="transform: translateY(-20px);">
+          <h3>《中华人民共和国可再生能源法》</h3>
+          <p>
+            旨在促进可再生能源的开发利用，增加能源供应，改善能源结构，保障能源安全，保护环境，实现经济社会的可持续发展制定。
+          </p>
+        </div>
+        <div class="item" style="transform: translateY(120px);">
+          <h3>《中华人民共和国清洁生产促进法》</h3>
+          <p>
+            旨在促进清洁生产，提高资源利用效率，减少和避免污染物的产生，保护和改善环境，保障人体健康，促进经济与社会可持续发展。
+          </p>
+        </div>
+        <div class="item" style="transform: translateY(0px);">
+          <h3>《“十四五”节能减排综合性工作方案》</h3>
+          <p>
+            旨在为认真贯彻落实党中央、国务院重大决策部署，大力推动节能减排，深入打好污染防治攻坚战，加快建立健全绿色低碳循环发展经济体系，推进经济社会发展全面绿色转型，助力实现碳达峰、碳中和目标。
+          </p>
+        </div>
+        <div class="item" style="transform: translateY(160px);">
+          <h3>《2030年前碳达峰行动方案》</h3>
+          <p>
+            到2025年，非化石能源消费比重达到20%左右，单位国内生产总值能源消耗比2020年下降13.5%，单位国内生产总值二氧化碳排放比2020年下降18%，为实现碳达峰奠定坚实基础。到2030年，非化石能源消费比重达到25%左右，单位国内生产总值二氧化碳排放比2005年下降65%以上，顺利实现2030年前碳达峰目标。
+          </p>
+        </div>
+        <div class="item" style="transform: translateY(20px);">
+          <h3>《“十四五”节能减排综合性工作方案》</h3>
+          <p>
+            到2025年，能源消费总量得到合理控制，化学需氧量、氨氮、氮氧化物、挥发性有机物排放总量比2020年分别下降8%、8%、10%以上、10%以上。
+          </p>
+        </div>
+      </div>
+    </div>
+    <div id="page4" class="page-item">
+      <div class="title">
+        <h2>交通物流节能减排工程--绿色铁路</h2>
+      </div>
+      <div class="box">
+        <div class="lin scale" style="padding-top: 150px;">
+          <img src="./img/logo1.jpg" alt="">
+          <p>智能交通+大数据优化</p>
+        </div>
+        <div class="rin">
+          <img src="./img/r1.jpg" alt="">
+        </div>
+      </div>
+    </div>
+    <div id="page5" class="page-item">
+      <div class="box">
+        <h2>中国内地城市地铁里程数和线路数(柱状图)</h2>
+        <div class="container fullWidth">
+          <div id="bar1" style="height: calc(100vh - 150px)"></div>
+        </div>
+      </div>
+    </div>
+    <div id="page6" class="page-item">
+      <h2>
+        截止2021年12月31日中国内地城市地铁里程数（不包含有轨电车）
+      </h2>
+      <div class="box">
+        <div class="container">
+          <div class="item-box lin">
+            <div class="item">
+              <div>2025年</div>
+              <p>
+                非化石能源消费比重达<span>20%</span>左右，单位国内生产总值能源消耗比2020年下降<span>13.5%</span>，单位国内生产总值二氧化碳排放比2020年下降<span>18%</span>，为实现碳达峰奠定坚实基础。
+              </p>
+            </div>
+            <div class="item">
+              <div>2030年</div>
+              <p>非化石能源消费比重达<span>25%</span>左右，单位国内生产总值二氧化碳排放比2002年下降<span>65%</span>以上，顺利实现2030年前碳达峰目标。</p>
+            </div>
+          </div>
+          <div id="bar8" class="rin"></div>
+        </div>
+      </div>
+    </div>
+    <div id="page7" class="page-item">
+      <div class="box">
+        <h2>中国内地城市地铁里程数和线路数(饼图)</h2>
+        <div class="container">
+          <div id="pie1" class="chart lin"></div>
+          <div class="desc rin">
+            2020年，中国45个城市轨道交通运营总线路<span>244</span>条，总里程<span>7969.7km</span>，其中，地铁运营线路<span>6280km</span>，占比达<span>78.8%</span>。
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="page8" class="page-item">
+      <div class="box">
+        <h2>中国主要城市地铁客流量排行榜(柱状图)</h2>
+        <div class="container">
+          <div id="bar3" class="lfin"></div>
+          <div class="desc rfin">
+            <h4>客流量前五分别是</h4>
+            <p>上海</p>
+            <p>北京</p>
+            <p>广州</p>
+            <p>深圳</p>
+            <p>成都</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="page10" class="page-item">
+
+
+
+
+      <div class="box">
+        <h2>成都与重庆地铁里程数对比(饼图)</h2>
+        <div class="container">
+          <div id="pie3"></div>
+        </div>
+      </div>
+
+      <div class="box">
+        <h2>成都与重庆地铁里程数、线路条数(柱状图)</h2>
+        <div class="container">
+          <div id="bar5"></div>
+          <div id="bar6"></div>
+          <div id="bar7"></div>
+        </div>
+      </div>
+
+      <div class="box">
+        <h2>成都与重庆日均客流量占常住人口比例(饼图)</h2>
+        <div class="container">
+          <div id="pie5"></div>
+          <div id="pie6"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+<script src="./js/geo.js"></script>
+<script src="./js/app.js"></script>
+
+</html>
