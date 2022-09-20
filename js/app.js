@@ -72,7 +72,6 @@ const bar1 = echarts.init(document.getElementById('bar1'))
 const bar3 = echarts.init(document.getElementById('bar3'))
 const bar5 = echarts.init(document.getElementById('bar5'))
 const bar6 = echarts.init(document.getElementById('bar6'))
-const bar7 = echarts.init(document.getElementById('bar7'))
 const bar8 = echarts.init(document.getElementById('bar8'))
 
 const pie1 = echarts.init(document.getElementById('pie1'))
@@ -574,7 +573,7 @@ const barOption5 = {
     }
   ]
 }
-bar5.setOption(barOption5)
+// bar5.setOption(barOption5)
 
 const barOption6 = {
   title: {
@@ -629,94 +628,7 @@ const barOption6 = {
     }
   ]
 }
-bar6.setOption(barOption6)
-
-const barOption7 = {
-  tooltip: {
-    trigger: 'axis',
-    axisPointer: {
-      // type: 'cross'
-    }
-  },
-  grid: {
-    right: '10%'
-  },
-  toolbox: {
-    feature: {
-      dataView: { show: true, readOnly: false },
-      restore: { show: true },
-      saveAsImage: { show: true }
-    }
-  },
-  legend: {
-    data: ['里程数', '线路数']
-  },
-  xAxis: [
-    {
-      type: 'category',
-      axisTick: {
-        alignWithLabel: true
-      },
-      data: comparations.city
-    }
-  ],
-  yAxis: [
-    {
-      type: 'value',
-      min: 0,
-      max: 600,
-      name: '里程数',
-      position: 'right',
-      alignTicks: true,
-      axisLine: {
-        show: true,
-        lineStyle: {
-        }
-      },
-      axisLabel: {
-        formatter: '{value} (千米)'
-      }
-    },
-    {
-      type: 'value',
-      min: 0,
-      name: '线路数',
-      position: 'left',
-      alignTicks: true,
-      offset: 0,
-      axisLine: {
-        show: true,
-        lineStyle: {
-        }
-      },
-      axisLabel: {
-        formatter: '{value} (条)'
-      }
-    }
-  ],
-  series: [
-    {
-      name: '里程数',
-      type: 'bar',
-      barMaxWidth: 50,
-      data: comparations.mileage,
-      itemStyle: {
-        color: '#FE7334'
-      }
-    },
-    {
-      name: '线路数',
-      type: 'bar',
-      yAxisIndex: 1,
-      barMaxWidth: 50,
-      data: comparations.metro,
-      itemStyle: {
-        color: '#002060'
-      }
-    }
-  ]
-}
-bar7.setOption(barOption7)
+// bar6.setOption(barOption6)
 
 const barOption8 = {
   title: {
@@ -1131,6 +1043,105 @@ const cloudOptionigyu = {  //指定图表的配置项和数据
   }]  //series结束
 }  //option结束
 
+const cloudjcts = echarts.init(document.getElementById("cloudjcts"))
+const cloudOptionjcts = {  //指定图表的配置项和数据
+  title: {  //配置标题组件
+    text: '',
+    x: 'center', y: 15,
+    textStyle: {
+      color: 'green', fontSize: 22,
+    }
+  },
+  tooltip: { show: true },  //配置提示框组件
+  series: [{  //数据系列及其配置
+    name: '',  //设置名称
+    type: 'wordCloud',  //设置图表类型为字云图
+    size: ['80%', '80%'],  //设置显示的字云图的大小
+    textRotation: [0, 30, 45, 70, 90, 115, -20, -90],  //设置文字倾斜角度
+    textPadding: 3,  //设置文字之间的间距
+    autoSize: { enable: true, minSize: 5 },  //设置文字的自动大小
+    textStyle: {
+      color: function () {
+        return 'rgb(' + [
+          Math.round(Math.random() * 255),
+          Math.round(Math.random() * 255),
+          Math.round(Math.random() * 255)
+        ].join(',') + ')'
+      },
+      emphasis: {
+        shadowBlur: 26,
+        color: '#333',
+        shadowColor: '#ccc',
+        fontSize: 20
+      }
+    },
+    data: [
+      { name: '推动', value: 5 },
+      { name: '优化', value: 5 },
+      { name: '着力', value: 4 },
+      { name: '调整', value: 4 },
+      { name: '碳达峰', value: 3 },
+      { name: '排放', value: 3 },
+      { name: '结构', value: 3 },
+      { name: '实施', value: 2 },
+      { name: '行动', value: 2 },
+      { name: '加快', value: 2 },
+      { name: '公共', value: 2 },
+      { name: '机构', value: 2 },
+      { name: '绿色', value: 2 },
+      { name: '有序', value: 1 },
+      { name: '推进', value: 1 },
+      { name: '严格', value: 1 },
+      { name: '落实', value: 1 },
+      { name: '国家', value: 1 },
+      { name: '政策', value: 1 },
+      { name: '十大', value: 1 },
+      { name: '试点', value: 1 },
+      { name: '建设', value: 1 },
+      { name: '健全', value: 1 },
+      { name: '统计', value: 1 },
+      { name: '核算', value: 1 },
+      { name: '体系', value: 1 },
+      { name: '创造条件', value: 1 },
+      { name: '实现', value: 1 },
+      { name: '能耗', value: 1 },
+      { name: '总量', value: 1 },
+      { name: '强度', value: 1 },
+      { name: '转变', value: 1 },
+      { name: '形成', value: 1 },
+      { name: '减污', value: 1 },
+      { name: '降碳', value: 1 },
+      { name: '激励', value: 1 },
+      { name: '约束', value: 1 },
+      { name: '机制', value: 1 },
+      { name: '开展', value: 1 },
+      { name: '节约型', value: 1 },
+      { name: '机关', value: 1 },
+      { name: '创建', value: 1 },
+      { name: '倡导', value: 1 },
+      { name: '适度', value: 1 },
+      { name: '生活', value: 1 },
+      { name: '方式', value: 1 },
+      { name: '节约', value: 1 },
+      { name: '一张', value: 1 },
+      { name: '一度', value: 1 },
+      { name: '一滴水', value: 1 },
+      { name: '坚持', value: 1 },
+      { name: '引领', value: 1 },
+      { name: '四大', value: 1 },
+      { name: '促进', value: 1 },
+      { name: '经济社会', value: 1 },
+      { name: '发展', value: 1 },
+      { name: '全面', value: 1 },
+      { name: '转型', value: 1 },
+      { name: '空间结构', value: 1 },
+      { name: '产业结构', value: 1 },
+      { name: '交通', value: 1 },
+      { name: '能源', value: 1 },
+    ]//data结束
+  }]  //series结束
+}  //option结束
+
 const initBubbleChart = () => {
   let data = passengerFlowData.city.map((item, index) => ({
     label: item,
@@ -1207,6 +1218,10 @@ const initBubbleChart = () => {
 
 window.bar1 = bar1
 window.barOption1 = barOption1
+window.bar5 = bar5
+window.barOption5 = barOption5
+window.bar6 = bar6
+window.barOption6 = barOption6
 window.bar8 = bar8
 window.barOption8 = barOption8
 window.pie1 = pie1
@@ -1219,4 +1234,6 @@ window.cloud = cloud
 window.cloudOption = cloudOption
 window.cloudigyu = cloudigyu
 window.cloudOptionigyu = cloudOptionigyu
+window.cloudjcts = cloudjcts
+window.cloudOptionjcts = cloudOptionjcts
 window.initBubbleChart = initBubbleChart

@@ -24,20 +24,6 @@ window.onload = () => {
     document.querySelector('#page7 .rin').classList.add('animate__animated', 'animate__bounceInRight')
   })
   scrollPage.on('page8', () => {
-    !(function defaultSelect() {
-      const index = 0
-      pie1.dispatchAction({ type: 'highlight', seriesIndex: 0, dataIndex: 0 })
-      pie1.on('mouseover', function (e) {
-        index = e.dataIndex
-        pie1.dispatchAction({ type: 'downplay', seriesIndex: 0, dataIndex: 0 })
-        pie1.dispatchAction({ type: 'downplay', seriesIndex: 1, dataIndex: 1 })
-        pie1.dispatchAction({ type: 'highlight', seriesIndex: e.dataIndex, dataIndex: e.dataIndex })
-      })
-      pie1.on('mouseout', function (e) {
-        index = e.dataIndex
-        pie1.dispatchAction({ type: 'highlight', seriesIndex: 0, dataIndex: 0 })
-      })
-    })()
     window.pie1 && window.pie1.setOption(pieOption1)
     document.querySelector('#page8 .lin').classList.add('animate__animated', 'animate__bounceInLeft')
     document.querySelector('#page8 .rin').classList.add('animate__animated', 'animate__bounceInRight')
@@ -79,5 +65,27 @@ window.onload = () => {
     document.querySelector('#page12 .fin').classList.add('animate__animated', 'animate__fadeInUp')
     document.querySelector('#page12 .lin').classList.add('animate__animated', 'animate__bounceInLeft')
     document.querySelector('#page12 .rin').classList.add('animate__animated', 'animate__bounceInRight')
+  })
+  scrollPage.on('page13', () => {
+    cloudjcts.setOption(cloudOptionjcts)
+    document.querySelector('#page13 .lin').classList.add('animate__animated', 'animate__bounceInLeft')
+    document.querySelector('#page13 .rin').classList.add('animate__animated', 'animate__bounceInRight')
+  })
+  scrollPage.on('page14', () => {
+    window.bar5 && window.bar5.setOption(barOption5)
+    window.bar6 && window.bar6.setOption(barOption6)
+    document.querySelector('#page14 .lin').classList.add('animate__animated', 'animate__bounceInLeft')
+    document.querySelector('#page14 .rin').classList.add('animate__animated', 'animate__bounceInRight')
+  })
+  scrollPage.on('page15', () => {
+    document.querySelector('#page15 .lin').classList.add('animate__animated', 'animate__bounceInLeft')
+    document.querySelector('#page15 .rin').classList.add('animate__animated', 'animate__bounceInRight')
+    document.querySelector('#page15 .rin2').classList.add('animate__animated', 'animate__bounceInRight')
+  })
+  scrollPage.on('page16', () => {
+    document.querySelector('#page16 .flin').classList.add('animate__animated', 'animate__fadeInLeft')
+    document.querySelector('#page16 .frin').classList.add('animate__animated', 'animate__fadeInRight')
+    document.querySelector('#page16 .fin').classList.add('animate__animated', 'animate__fadeInUp')
+    document.querySelector('#page16 .bgin').classList.add('animate__animated', 'animate__fadeInUpBig')
   })
 }
