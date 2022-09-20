@@ -9,6 +9,7 @@
   <!-- 图表依赖 -->
   <script type="text/javascript" src="./js/echarts.min.js"></script>
   <script type="text/javascript" src="./js/echarts-gl.min.js"></script>
+  <script type="text/javascript" src="./js/echarts-wordcloud.min.js"></script>
   <!-- 百度地图 -->
   <script type="text/javascript"
     src="https://api.map.baidu.com/getscript?v=3.0&ak=00aznPex2EE9U3gmX3fBlprSzobnmwzV"></script>
@@ -37,14 +38,19 @@
       </div>
     </div>
     <div id="page2" class="page-item">
+      <div class="box">
+        <h2>page2</h2>
+      </div>
+    </div>
+    <div id="page3" class="page-item">
       <div class="mapBox">
-        <h2>中国内地城市地铁里程数和线路数(热力地图)</h2>
+        <h2>中国内地城市地铁里程数和线路数</h2>
         <div class="container">
           <div id="mapContainer"></div>
         </div>
       </div>
     </div>
-    <div id="page3" class="page-item">
+    <div id="page4" class="page-item">
       <div class="title">
         <h2>国家高度重视节能发展</h2>
       </div>
@@ -94,7 +100,7 @@
         </div>
       </div>
     </div>
-    <div id="page4" class="page-item">
+    <div id="page5" class="page-item">
       <div class="title">
         <h2>交通物流节能减排工程--绿色铁路</h2>
       </div>
@@ -108,7 +114,7 @@
         </div>
       </div>
     </div>
-    <div id="page5" class="page-item">
+    <div id="page6" class="page-item">
       <div class="box">
         <h2>中国内地城市地铁里程数和线路数(柱状图)</h2>
         <div class="container fullWidth">
@@ -116,7 +122,7 @@
         </div>
       </div>
     </div>
-    <div id="page6" class="page-item">
+    <div id="page7" class="page-item">
       <h2>
         截止2021年12月31日中国内地城市地铁里程数（不包含有轨电车）
       </h2>
@@ -138,9 +144,9 @@
         </div>
       </div>
     </div>
-    <div id="page7" class="page-item">
+    <div id="page8" class="page-item">
       <div class="box">
-        <h2>中国内地城市地铁里程数和线路数(饼图)</h2>
+        <h2>中国45个城市轨道交通占比</h2>
         <div class="container">
           <div id="pie1" class="chart lin"></div>
           <div class="desc rin">
@@ -149,11 +155,11 @@
         </div>
       </div>
     </div>
-    <div id="page8" class="page-item">
+    <div id="page9" class="page-item">
       <div class="box">
-        <h2>中国主要城市地铁客流量排行榜(柱状图)</h2>
+        <h2>2021年中国主要城市地铁客流量排行榜</h2>
         <div class="container">
-          <div id="bar3" class="lfin"></div>
+          <div id="bubble" class="lfin"></div>
           <div class="desc rfin">
             <h4>客流量前五分别是</h4>
             <p>上海</p>
@@ -165,7 +171,7 @@
         </div>
       </div>
     </div>
-    <div id="page10" class="page-item">
+    <div id="page100" class="page-item">
 
 
 
@@ -191,6 +197,8 @@
         <div class="container">
           <div id="pie5"></div>
           <div id="pie6"></div>
+          <div id="cloud"></div>
+          <div id="bar3"></div>
         </div>
       </div>
     </div>

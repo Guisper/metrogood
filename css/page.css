@@ -29,33 +29,38 @@
 
 /* 第二页 */
 
-#page2 .mapBox>.container>div {
+#page3 .mapBox>.container>div {
   width: 100%;
   height: calc(100vh - 70px);
   box-shadow: 0 0 20px rgb(0 0 0 / 5%);
   background-color: white;
 }
 
+#page3 #mapContainer {
+  width: calc(50% - 40px);
+  height: 500px;
+  margin: 10px;
+}
+
 /* 第三页 */
-#page3 {
+#page4 {
   position: relative;
-  background-color: #e1eae6;
+  background-color: #d0cece;
   height: 100% !important;
 }
 
-#page3 .title {
+#page4 .title {
   position: absolute;
   left: 15px;
 }
 
-#page3 .title h2 {
-  color: rgb(31, 121, 67);
+#page4 .title h2 {
+  color: rgba(8, 77, 35);
   font-size: 48px;
   font-weight: bolder;
-  /* font-style: italic; */
 }
 
-#page3 .box {
+#page4 .box {
   height: 1200px;
   display: flex;
   flex-direction: row-reverse;
@@ -64,40 +69,31 @@
   position: relative;
 }
 
-#page3 .box .line {
-  width: 10px;
+#page4 .box .line {
+  width: 6px;
   height: 100%;
-  background-color: #b9d3c6;
+  background-color: #0f8b4d;
   position: absolute;
   left: 50%;
   margin-left: -5px;
 }
 
-#page3 .box .item {
+#page4 .box .item {
   width: 50%;
 }
 
-/* #page3 .box .item:nth-child(odd) {
-  align-self: start;
-}
-
-#page3 .box .item.item:nth-child(2n) {
-  align-self: end;
-} */
-
-
-#page3 .box .item h3 {
+#page4 .box .item h3 {
   margin: 0;
   padding: 0;
   font-size: 28px;
   font-weight: 400;
   text-align: left;
-  color: rgba(8, 77, 35, 1);
-  border-bottom: 10px solid #B2CFC0DB;
+  color: #067c41;
+  border-bottom: 5px solid #0f8b4d;
   white-space: nowrap;
 }
 
-#page3 .box .item p {
+#page4 .box .item p {
   margin: 0;
   padding: 10px;
   font-size: 20px;
@@ -107,69 +103,79 @@
 }
 
 
-#page4 {
+#page5 {
   position: relative;
-  background-color: #e1eae6;
+  background-color: #d0cece;
 }
 
-#page4 .scale {
+#page5 .scale {
   cursor: pointer;
   transition: .5s;
 }
 
-#page4 .scale:hover {
+#page5 .scale:hover {
   scale: 1.2;
 }
 
-#page4 .title {
+#page5 .title {
   position: absolute;
   left: 15px;
 }
 
-#page4 .title h2 {
-  color: #084D23FF;
+#page5 .title h2 {
+  color: rgba(8, 77, 35);
   font-size: 48px;
   font-weight: bolder;
 }
 
-#page4 .box {
+#page5 .box {
   display: flex;
   justify-content: space-around;
   padding-top: 200px;
 }
 
-#page4 .box p {
+#page5 .box p {
   font-size: 28px;
   font-weight: 600;
   color: rgba(8, 77, 35, 1);
 }
 
-#page6 {
-  background-color: #d9e8e1;
+#page6 h2 {
+  text-align: center;
+  font-size: 28px;
+  font-weight: 800;
+  color: rgba(8, 77, 35);
+}
+
+#page7 {
   width: 100%;
 }
 
-#page6 h2 {
+#page7 #bar8 {
+  width: 40%;
+}
+
+#page7 h2 {
   padding: 20px 0 100px;
   text-align: center;
   font-size: 28px;
   font-weight: 800;
-  color: rgba(8, 77, 35, 1);
+  color: rgba(8, 77, 35);
 }
 
-#page6 .item-box {
+#page7 .item-box {
   background: none;
   box-shadow: none;
 }
 
 
-#page6 .item-box .item {
+#page7 .item-box .item {
   padding: 0 100px;
   display: column;
   text-align: left;
 }
 
-#page6 .item-box .item div {
+#page7 .item-box .item div {
   width: 100px;
   padding: 5px;
   font-size: 28px;
@@ -179,7 +185,7 @@
   border-radius: 10px;
 }
 
-#page6 .item-box .item p {
+#page7 .item-box .item p {
   margin-left: 50px;
   margin-bottom: 80px;
   font-size: 24px;
@@ -187,57 +193,82 @@
   color: rgba(111, 143, 124, 1);
 }
 
-#page6 .item-box .item span {
+#page7 .item-box .item span {
   color: #084D23FF;
 }
 
 
-#page7 {
+#page8 {
   position: relative;
   background-color: #e4eae8;
 }
 
-#page7 .chart {
-  width: 45%;
-  margin: 50px;
+#page8 h2 {
+  padding: 20px 0 50px;
+  text-align: center;
+  font-size: 28px;
+  font-weight: 800;
+  color: rgba(8, 77, 35);
 }
 
-#page7 .desc {
+
+#page8 .chart {
+  width: 45%;
+  margin-left: 100px;
+}
+
+#page8 .desc {
+  width: 400px;
+  height: auto;
   background: none;
   box-shadow: none;
   position: absolute;
   right: 100px;
-  bottom: -100px;
+  bottom: 100px;
   text-align: left;
-  width: 400px;
   font-size: 30px;
   font-weight: 600;
   color: rgba(111, 143, 124, 1);
 }
 
-#page7 span {
+#page8 span {
   color: #084D23FF;
 }
 
-#page8 .box {
-  padding-top: 100px;
+#page9 {
+  position: relative;
 }
 
-#page8 #bar3 {
-  width: 70%;
+#page9 h2 {
+  padding: 20px 0 50px;
+  text-align: center;
+  font-size: 28px;
+  font-weight: 800;
+  color: rgba(8, 77, 35);
 }
 
-#page8 .desc {
-  margin-top: 50px;
+#page9 .container {
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-around;
+}
+
+#page9 .desc {
+  width: 400px;
+  height: auto;
   background: none;
   box-shadow: none;
   text-align: center;
   font-size: 32px;
   font-weight: 600;
-  color: rgba(34, 105, 186, 1);
-  width: 400px;
+  color: rgba(34, 105, 186);
 }
 
-#page8 .desc p {
+#page9 .desc p {
   margin: 5px;
+}
+
+#page9 #bubble {
+  width: 50%;
+  height: 660px;
 }

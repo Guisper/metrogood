@@ -4,7 +4,7 @@ const metroData = {
   metro: [19, 25, 16, 12, 12, 11, 11, 11, 12, 6, 8, 8, 7, 5, 7, 5, 5, 6, 5, 4, 5, 4, 4, 4, 5, 3, 3, 3, 3, 3, 2, 3, 2, 1, 2, 1, 2, 2, 1, 1, 1, 1,]
 }
 
-var total = metroData.mileage.reduce((a, b) => a + b, 0)
+const total = metroData.mileage.reduce((a, b) => a + b, 0)
 metroData.ratio = metroData.mileage.map(item => (item * 100 / total).toFixed(2))
 
 const mileageData = [
@@ -13,7 +13,7 @@ const mileageData = [
 ]
 
 const passengerFlowData = {
-  city: ['上海', '北京', '广州', '深圳', '成都', '重庆', '西安', '武汉', '杭州', '南京', '长沙', '天津', '郑州', '苏州', '沈阳', '南宁', '合肥', '南昌', '宁波', '青岛', '昆明', '长春', '厦门', '大连', '无锡', '福州', '石家庄', '贵阳', '哈尔滨', '徐州', '兰州', '济南', '呼和浩特', '常州', '东莞', '太原', '乌鲁木齐', '洛阳', '温州', '嘉兴（海宁）', '绍兴', '芜湖', '佛山',],
+  city: ['上海', '北京', '广州', '深圳', '成都', '重庆', '西安', '武汉', '杭州', '南京', '长沙', '天津', '郑州', '苏州', '沈阳', '南宁', '合肥', '南昌', '宁波', '青岛', '昆明', '长春', '厦门', '大连', '无锡', '福州', '石家庄', '贵阳', '哈尔滨', '徐州', '兰州', '济南', '呼和浩特', '常州', '东莞', '太原', '乌鲁木齐', '洛阳', '温州', '嘉兴', '绍兴', '芜湖', '佛山',],
   footfall: [356957.00, 305994.27, 283397.70, 217934.04, 178576.36, 109334.10, 102062.91, 100205.51, 89839.55, 87935.81, 57945.78, 46306.74, 43069.15, 40419.30, 38379.63, 28875.15, 27072.10, 25967.13, 25826.14, 24678.04, 22149.04, 19513.01, 16993.80, 15640.07, 14528.00, 11853.69, 9200.20, 8975.51, 7219.40, 6637.70, 6402.97, 5603.01, 5378.06, 4803.01, 4077.79, 3915.92, 3058.77, 1337.82, 949.60, 488.24, 413.80, 294.45, 27.10,]
 }
 
@@ -68,22 +68,22 @@ const fossilFuelsData = {
   ratio: [15, 20, 25]
 }
 
-var bar1 = echarts.init(document.getElementById('bar1'))
-var bar3 = echarts.init(document.getElementById('bar3'))
-var bar5 = echarts.init(document.getElementById('bar5'))
-var bar6 = echarts.init(document.getElementById('bar6'))
-var bar7 = echarts.init(document.getElementById('bar7'))
-var bar8 = echarts.init(document.getElementById('bar8'))
+const bar1 = echarts.init(document.getElementById('bar1'))
+const bar3 = echarts.init(document.getElementById('bar3'))
+const bar5 = echarts.init(document.getElementById('bar5'))
+const bar6 = echarts.init(document.getElementById('bar6'))
+const bar7 = echarts.init(document.getElementById('bar7'))
+const bar8 = echarts.init(document.getElementById('bar8'))
 
-var pie1 = echarts.init(document.getElementById('pie1'))
-var pie3 = echarts.init(document.getElementById('pie3'))
-var pie5 = echarts.init(document.getElementById('pie5'))
-var pie6 = echarts.init(document.getElementById('pie6'))
+const pie1 = echarts.init(document.getElementById('pie1'))
+const pie3 = echarts.init(document.getElementById('pie3'))
+const pie5 = echarts.init(document.getElementById('pie5'))
+const pie6 = echarts.init(document.getElementById('pie6'))
 
 
-var mapContainer = echarts.init(document.getElementById('mapContainer'))
+const mapContainer = echarts.init(document.getElementById('mapContainer'))
 
-var barOption1 = {
+const barOption1 = {
   title: {
     text: '中国内地城市地铁里程数和线路数',
   },
@@ -186,9 +186,9 @@ var barOption1 = {
     }
   ]
 }
-bar1.setOption(barOption1)
+// bar1.setOption(barOption1)
 
-var barOption3 = {
+const barOption3 = {
   title: {
     text: '中国主要城市地铁客流量排行榜',
   },
@@ -262,20 +262,30 @@ var barOption3 = {
 bar3.setOption(barOption3)
 
 
-var timer = setInterval(() => {
-  var o1 = barOption1.dataZoom[0]
-  o1.start = o1.start >= 100 ? 0 : o1.start + 3
-  o1.end = o1.end >= 100 ? 0 : o1.end + 3
+const timer = setInterval(() => {
+  const o1 = barOption1.dataZoom[0]
+  const o3 = barOption3.dataZoom[0]
+  if (o1.start >= 100 || o1.end >= 100) {
+    o1.start = 0
+    o1.end = 35
+  } else {
+    o1.start += 3
+    o1.end += 3
+  }
 
-  var o3 = barOption3.dataZoom[0]
-  o3.start = o3.start >= 100 ? 0 : o3.start + 3
-  o3.end = o3.end >= 100 ? 0 : o3.end + 3
+  if (o3.start >= 100 || o3.end >= 100) {
+    o3.start = 0
+    o3.end = 20
+  } else {
+    o3.start += 3
+    o3.end += 3
+  }
 
   bar1.setOption(barOption1)
   bar3.setOption(barOption3)
 }, 1500)
 
-var pieOption1 = {
+const pieOption1 = {
   title: {
     text: '城市轨道交通运营线路情况',
     left: 'center'
@@ -329,9 +339,9 @@ var pieOption1 = {
     }
   ]
 }
-pie1.setOption(pieOption1)
+// pie1.setOption(pieOption1)
 
-var pieOption3 = {
+const pieOption3 = {
   title: {
     text: '成都与重庆地铁里程数对比',
     left: 'center'
@@ -388,7 +398,7 @@ var pieOption3 = {
 
 pie3.setOption(pieOption3)
 
-var pieOption5 = {
+const pieOption5 = {
   title: {
     text: '成都日均客流量占常住人口比例',
     left: 'center'
@@ -445,7 +455,7 @@ var pieOption5 = {
 
 pie5.setOption(pieOption5)
 
-var pieOption6 = {
+const pieOption6 = {
   title: {
     text: '重庆日均客流量占常住人口比例',
     left: 'center'
@@ -502,7 +512,7 @@ var pieOption6 = {
 
 pie6.setOption(pieOption6)
 
-var barOption5 = {
+const barOption5 = {
   title: {
     text: '里程数对比',
   },
@@ -567,7 +577,7 @@ var barOption5 = {
 }
 bar5.setOption(barOption5)
 
-var barOption6 = {
+const barOption6 = {
   title: {
     text: '线路条数对比',
   },
@@ -622,7 +632,7 @@ var barOption6 = {
 }
 bar6.setOption(barOption6)
 
-var barOption7 = {
+const barOption7 = {
   tooltip: {
     trigger: 'axis',
     axisPointer: {
@@ -709,7 +719,7 @@ var barOption7 = {
 }
 bar7.setOption(barOption7)
 
-var barOption8 = {
+const barOption8 = {
   title: {
     text: '非化石能源消费比重',
   },
@@ -793,7 +803,7 @@ var barOption8 = {
     }
   ]
 }
-bar8.setOption(barOption8)
+// bar8.setOption(barOption8)
 
 
 const mapData = [
@@ -865,22 +875,214 @@ const mapOption = {
 
 mapContainer.setOption(mapOption)
 
-window.addEventListener('resize', mapContainer.resize);
+window.addEventListener('resize', mapContainer.resize)
 
-(function defaultSelect() {
-  var index = [0, 0, 0, 0]
-  var arr = [pie1, pie3, pie5, pie6]
+!(function defaultSelect() {
+  const index = [0, 0, 0, 0]
+  const arr = [pie1, pie3, pie5, pie6]
   for (const i in arr) {
-    arr[i].dispatchAction({ type: 'highlight', seriesIndex: 0, dataIndex: 0 });
+    arr[i].dispatchAction({ type: 'highlight', seriesIndex: 0, dataIndex: 0 })
     arr[i].on('mouseover', function (e) {
-      index[i] = e.dataIndex;
-      arr[i].dispatchAction({ type: 'downplay', seriesIndex: 0, dataIndex: 0 });
-      arr[i].dispatchAction({ type: 'downplay', seriesIndex: 1, dataIndex: 1 });
-      arr[i].dispatchAction({ type: 'highlight', seriesIndex: e.dataIndex, dataIndex: e.dataIndex });
-    });
+      index[i] = e.dataIndex
+      arr[i].dispatchAction({ type: 'downplay', seriesIndex: 0, dataIndex: 0 })
+      arr[i].dispatchAction({ type: 'downplay', seriesIndex: 1, dataIndex: 1 })
+      arr[i].dispatchAction({ type: 'highlight', seriesIndex: e.dataIndex, dataIndex: e.dataIndex })
+    })
     arr[i].on('mouseout', function (e) {
-      index[i] = e.dataIndex;
-      arr[i].dispatchAction({ type: 'highlight', seriesIndex: 0, dataIndex: 0 });
-    });
+      index[i] = e.dataIndex
+      arr[i].dispatchAction({ type: 'highlight', seriesIndex: 0, dataIndex: 0 })
+    })
   }
 })()
+
+const cloud = echarts.init(document.getElementById("cloud"))
+const cloudOption = {  //指定图表的配置项和数据
+  title: {  //配置标题组件
+    text: '',
+    x: 'center', y: 15,
+    textStyle: {
+      color: 'green', fontSize: 22,
+    }
+  },
+  tooltip: { show: true },  //配置提示框组件
+  series: [{  //数据系列及其配置
+    name: '',  //设置名称
+    type: 'wordCloud',  //设置图表类型为字云图
+    size: ['80%', '80%'],  //设置显示的字云图的大小
+    textRotation: [0, 30, 45, 70, 90, 115, -20, -90],  //设置文字倾斜角度
+    textPadding: 3,  //设置文字之间的间距
+    autoSize: { enable: true, minSize: 5 },  //设置文字的自动大小
+    textStyle: {
+      color: function () {
+        return 'rgb(' + [
+          Math.round(Math.random() * 255),
+          Math.round(Math.random() * 255),
+          Math.round(Math.random() * 255)
+        ].join(',') + ')'
+      },
+      // color() {
+      //   const colors = ['rgb(112,173,71)', 'rgb(22,222,32)', 'rgb(218,0,0)', 'rgb(255,9,9)', 'rgb(255,33,33)', 'rgb(207,35,43)', 'rgb(224,68,75)', 'rgb(143,188,76)']
+      //   console.log(colors[Math.random() * colors.length >> 0])
+      //   return colors[Math.random() * colors.length >> 0]
+      // },
+      emphasis: {
+        shadowBlur: 26,
+        color: '#333',
+        shadowColor: '#ccc',
+        fontSize: 20
+      }
+    },
+    data: [  //设置具体的数据
+      { name: '发展', value: 9 },
+      { name: '绿色', value: 6 },
+      { name: '排放', value: 6 },
+      { name: '促进', value: 6 },
+      { name: '推进', value: 5 },
+      { name: '碳达峰', value: 5 },
+      { name: '节能', value: 5 },
+      { name: '再生能源', value: 5 },
+      { name: '能源', value: 5 },
+      { name: '下降', value: 5 },
+      { name: '推动', value: 4 },
+      { name: '总量', value: 4 },
+      { name: '完善', value: 4 },
+      { name: '提高', value: 4 },
+      { name: '经济', value: 4 },
+      { name: '旨在', value: 4 },
+      { name: '减排', value: 4 },
+      { name: '单位', value: 4 },
+      { name: '国内', value: 4 },
+      { name: '生产总值', value: 4 },
+      { name: '改造', value: 3 },
+      { name: '建设', value: 3 },
+      { name: '能力', value: 3 },
+      { name: '政策', value: 3 },
+      { name: '加快', value: 3 },
+      { name: '优化', value: 3 },
+      { name: '改善', value: 3 },
+      { name: '经济社会', value: 3 },
+      { name: '持续', value: 3 },
+      { name: '实现', value: 3 },
+      { name: '目标', value: 3 },
+      { name: '健全', value: 3 },
+      { name: '控制', value: 3 },
+      { name: '消费', value: 3 },
+      { name: '以上', value: 3 },
+      { name: '提升', value: 2 },
+      { name: '电网', value: 2 },
+      { name: '能耗', value: 2 },
+      { name: '约束', value: 2 },
+      { name: '生产', value: 2 },
+      { name: '创新', value: 2 },
+      { name: '产业', value: 2 },
+      { name: '供给', value: 2 },
+      { name: '数字', value: 2 },
+      { name: '壮大', value: 2 },
+      { name: '社会', value: 2 },
+      { name: '利用效率', value: 2 },
+      { name: '保护', value: 2 },
+      { name: '环境', value: 2 },
+      { name: '全面', value: 2 },
+      { name: '保障', value: 2 },
+      { name: '电力系统', value: 2 },
+      { name: '污染物', value: 2 },
+      { name: '交通', value: 2 },
+      { name: '物流', value: 2 },
+      { name: '机制', value: 2 },
+      { name: '化石', value: 2 },
+      { name: '比重', value: 2 },
+      { name: '达到', value: 2 },
+      { name: '能源消耗', value: 2 },
+      { name: '二氧化碳', value: 2 },
+      { name: '行动', value: 1 },
+      { name: '方案', value: 1 },
+      { name: '煤电', value: 1 },
+      { name: '降碳', value: 1 },
+      { name: '灵活性', value: 1 },
+    ]  //data结束
+  }]  //series结束
+}  //option结束
+cloud.setOption(cloudOption)  //为echarts对象加载数据 
+
+
+const initBubbleChart = () => {
+  let data = passengerFlowData.city.map((item, index) => ({
+    label: item,
+    value: passengerFlowData.footfall[index]
+  }))
+  let format = ['label', 'value']
+  let [maxValue, temp] = [0, []]
+  data.forEach(item => {
+    temp.push(item[format[1]])
+  })
+  maxValue = Math.max.apply(null, temp)
+  // 气泡颜色数组
+  let color = [
+    '#FFB600', '#886CFF', '#0084FF',
+    '#4CB690', '#58B458', '#6C6C6C',
+    '#F56161', '#FC754C', '#5F5EEC'
+  ]
+  // 气泡颜色备份
+  let bakeColor = [...color]
+  // 气泡数据
+  let bubbleData = []
+  // 气泡基础大小
+  let basicSize = 70
+  // 节点之间的斥力因子,值越大,气泡间距越大
+  let repulsion = 380
+  basicSize = 40
+  repulsion = 120
+
+  // 填充气泡数据数组bubbleData
+  for (let item of data) {
+    // 确保气泡数据条数少于或等于气泡颜色数组大小时，气泡颜色不重复
+    if (!bakeColor.length) bakeColor = [...color]
+    let colorSet = new Set(bakeColor)
+    let curIndex = Math.round(Math.random() * (colorSet.size - 1))
+    let curColor = bakeColor[curIndex]
+    colorSet.delete(curColor)
+    bakeColor = [...colorSet]
+    // 气泡大小设置
+    let size = (item[format[1]] * basicSize * 2) / maxValue
+    if (size < basicSize) size = basicSize
+
+    bubbleData.push({
+      "name": item[format[0]],
+      "value": item[format[1]],
+      "symbolSize": size,
+      "draggable": true,
+      "itemStyle": {
+        "normal": { "color": curColor }
+      }
+    })
+  }
+  let bubbleChart = echarts.init(document.getElementById('bubble'))
+  let bubbleOptions = {
+    tooltip: {
+      trigger: 'item'
+    },
+    backgroundColor: '#fff',
+    animationEasingUpdate: 'bounceIn',
+    series: [{
+      type: 'graph',
+      layout: 'force',
+      force: {
+        repulsion: repulsion,
+        edgeLength: 10
+      },
+      // 是否开启鼠标缩放和平移漫游
+      roam: false,
+      label: { normal: { show: true } },
+      data: bubbleData,
+    }]
+  }
+  bubbleChart.setOption(bubbleOptions)
+}
+
+window.bar1 = bar1
+window.barOption1 = barOption1
+window.bar8 = bar8
+window.barOption8 = barOption8
+window.pie1 = pie1
+window.pieOption1 = pieOption1
+window.initBubbleChart = initBubbleChart
