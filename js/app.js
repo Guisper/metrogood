@@ -841,8 +841,8 @@ const mapOption = {
     trigger: 'item'
   },
   bmap: {
-    center: [104.114129, 30.550339],
-    zoom: 6,
+    center: [113.112348, 28.272865],
+    zoom: 5,
     roam: true,
   },
   series: [
@@ -852,7 +852,32 @@ const mapOption = {
       coordinateSystem: 'bmap',
       data: convertData(mapData[0]),
       symbolSize: function (val) {
-        return Math.max(15, val[2] / 8)
+        return Math.max(15, val[2] / 22)
+      },
+      encode: {
+        value: 2
+      },
+      label: {
+        formatter: '{a}',
+        position: 'right',
+        show: false
+      },
+      emphasis: {
+        label: {
+          show: true,
+          fontWeight: 'bold',
+          fontSize: 15
+        }
+      }
+    },
+    {
+      name: '线路数',
+      type: 'scatter',
+      coordinateSystem: 'bmap',
+      data: convertData(mapData[1]),
+      symbolOffset: ['60%', 0],
+      symbolSize: function (val) {
+        return Math.max(5, val[2])
       },
       encode: {
         value: 2

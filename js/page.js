@@ -1,6 +1,10 @@
 window.onload = () => {
   const scrollPage = new ScrollPage('#main-page')
   window.scrollPage = scrollPage
+  scrollPage.on('page3', () => {
+    document.querySelector('#page3 .lin').classList.add('animate__animated', 'animate__bounceInLeft')
+    document.querySelector('#page3 .rin').classList.add('animate__animated', 'animate__bounceInRight')
+  })
   scrollPage.on('page5', () => {
     document.querySelector('#page5 .lin').classList.add('animate__animated', 'animate__bounceInLeft')
     document.querySelector('#page5 .rin').classList.add('animate__animated', 'animate__bounceInRight')

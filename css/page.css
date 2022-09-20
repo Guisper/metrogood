@@ -27,26 +27,80 @@
   color: #084d22;
 }
 
-/* 第二页 */
+#page2 h2 {
+  color: rgba(8, 77, 35);
+  font-size: 48px;
+  font-weight: bolder;
+  padding: 40px 15px 0 10px;
+}
 
-#page3 .mapBox>.container>div {
-  width: 100%;
-  height: calc(100vh - 70px);
-  box-shadow: 0 0 20px rgb(0 0 0 / 5%);
-  background-color: white;
+#page2 p {
+  text-align: left;
+  color: rgb(47, 136, 83);
+  font-size: 24px;
+}
+
+#page3 h2 {
+  padding-bottom: 30px;
+  text-align: center;
+  font-size: 28px;
+  font-weight: 800;
+  color: rgb(8, 77, 35);
+}
+
+#page3 .mapBox>.container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-around;
+}
+
+#page3 .desc {
+  width: 20%;
+  height: auto;
+  background: none;
+  box-shadow: none;
+  text-align: left;
+  font-size: 30px;
+  font-weight: 600;
+  color: rgb(47, 136, 83);
+}
+
+#page3 .desc p {
+  margin: 100px 0;
+}
+
+#page3 .desc span {
+  color: #084D23FF;
+}
+
+#page3 .mapBox>.container>#mapContainer {
+  width: 70%;
+  height: calc(100vh - 200px);
 }
 
 #page3 #mapContainer {
-  width: calc(50% - 40px);
-  height: 500px;
   margin: 10px;
 }
 
-/* 第三页 */
 #page4 {
   position: relative;
   background-color: #d0cece;
   height: 100% !important;
+}
+
+#page4 #cloud {
+  position: absolute;
+  left: 30px;
+  top: 180px;
+  width: 30%;
+  height: 600px;
+  margin: 10px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgb(0 0 0 / 5%);
+  padding: 10px;
+  background-color: white;
 }
 
 #page4 .title {
@@ -61,7 +115,9 @@
 }
 
 #page4 .box {
-  height: 1200px;
+  width: 60%;
+  margin-left: 30%;
+  height: 100vh;
   display: flex;
   flex-direction: row-reverse;
   padding: 0 120px;
@@ -85,21 +141,22 @@
 #page4 .box .item h3 {
   margin: 0;
   padding: 0;
-  font-size: 28px;
+  font-size: 24px;
   font-weight: 400;
   text-align: left;
   color: #067c41;
-  border-bottom: 5px solid #0f8b4d;
+  border-bottom: 3px solid #0f8b4d;
+  position: relative;
   white-space: nowrap;
 }
 
 #page4 .box .item p {
   margin: 0;
   padding: 10px;
-  font-size: 20px;
+  font-size: 15px;
   font-weight: 400;
   text-align: left;
-  color: #6F8F7C;
+  color: #2e6544;
 }
 
 
@@ -109,6 +166,7 @@
 }
 
 #page5 .scale {
+  margin-top: 150px;
   cursor: pointer;
   transition: .5s;
 }
@@ -190,7 +248,7 @@
   margin-bottom: 80px;
   font-size: 24px;
   font-weight: 600;
-  color: rgba(111, 143, 124, 1);
+  color: rgb(47, 136, 83);
 }
 
 #page7 .item-box .item span {
@@ -200,7 +258,6 @@
 
 #page8 {
   position: relative;
-  background-color: #e4eae8;
 }
 
 #page8 h2 {
@@ -228,7 +285,7 @@
   text-align: left;
   font-size: 30px;
   font-weight: 600;
-  color: rgba(111, 143, 124, 1);
+  color: rgb(47, 136, 83);
 }
 
 #page8 span {
