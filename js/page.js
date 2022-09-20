@@ -88,4 +88,18 @@ window.onload = () => {
     document.querySelector('#page16 .fin').classList.add('animate__animated', 'animate__fadeInUp')
     document.querySelector('#page16 .bgin').classList.add('animate__animated', 'animate__fadeInUpBig')
   })
+  scrollPage.on('page17', () => {
+    document.querySelector('#page17 .flin').classList.add('animate__animated', 'animate__fadeInLeft')
+    document.querySelector('#page17 .frin').classList.add('animate__animated', 'animate__fadeInRight')
+  })
+  scrollPage.on('page18', () => {
+    document.querySelector('#page18 .flin').classList.add('animate__animated', 'animate__fadeInLeft')
+    document.querySelector('#page18 .frin').classList.add('animate__animated', 'animate__fadeInRight')
+    document.querySelector('#page18 .fin').classList.add('animate__animated', 'animate__fadeIn')
+  })
+  scrollPage.on('page19', () => {
+    document.querySelector('#page19 .flin').classList.add('animate__animated', 'animate__fadeInLeft')
+    document.querySelector('#page19 .frin').classList.add('animate__animated', 'animate__fadeInRight')
+    document.querySelector('#page19 .fin').classList.add('animate__animated', 'animate__fadeIn')
+  })
 }

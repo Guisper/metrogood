@@ -423,7 +423,6 @@
   color: #067c41;
   border-bottom: 3px solid #0f8b4d;
   position: relative;
-  white-space: nowrap;
 }
 
 #page11 .box .item p {
@@ -626,7 +625,7 @@
   justify-content: center;
 }
 
-#page16 .img>div>img{
+#page16 .img>div>img {
   height: 360px;
 }
 
@@ -637,4 +636,176 @@
 
 #page16 .bottom img {
   width: 50%;
+}
+
+#page17 {
+  position: relative;
+}
+
+#page17 .title {
+  position: absolute;
+  left: 15px;
+}
+
+#page17 h3 {
+  margin: 0;
+  padding: 0;
+}
+
+#page17 .title h2 {
+  color: rgba(8, 77, 35);
+  font-size: 48px;
+  font-weight: bolder;
+}
+
+#page17 .top {
+  position: absolute;
+  right: 100px;
+  top: 60px;
+  width: 30%;
+}
+
+#page17 h3 {
+  width: 100%;
+  position: absolute;
+  top: 220px;
+  text-align: center;
+  color: #298b52;
+  font-size: 38px;
+  font-weight: bolder;
+}
+
+#page17 img {
+  width: 100%;
+  border-radius: 5px;
+}
+
+#page17 .img {
+  padding-top: 240px;
+  display: flex;
+  position: relative;
+}
+
+#page17 p {
+  margin: 10px;
+  text-align: center;
+  color: #6F8F7C;
+  font-size: 24px;
+  font-weight: bolder;
+}
+
+#page17 .flin {
+  width: 60%;
+  padding: 50px;
+}
+
+#page17 .frin {
+  margin-top: 30px;
+  padding: 50px;
+  width: 40%;
+}
+
+#page17 .scale {
+  cursor: pointer;
+  transition: .5s;
+}
+
+#page17 .scale:hover {
+  scale: 1.05;
+}
+
+#page18 h3 {
+  margin: 0;
+  padding: 0;
+  padding: 20px 0;
+  width: 100%;
+  text-align: center;
+  color: #298b52;
+  font-size: 38px;
+  font-weight: bolder;
+}
+
+#page18 img {
+  display: inline-block;
+  width: 80%;
+  height: 320px;
+  border-radius: 5px;
+}
+
+#page18 .img {
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  flex-wrap: wrap;
+}
+
+#page18 .img>div {
+  width: 35%;
+  padding: 0 50px;
+}
+
+#page18 p {
+  margin: 10px;
+  text-align: center;
+  color: #6F8F7C;
+  font-size: 24px;
+  font-weight: bolder;
+}
+
+#page18 .scale {
+  cursor: pointer;
+  transition: .5s;
+}
+
+#page18 .scale:hover {
+  scale: 1.05;
+}
+
+
+#page19 h3 {
+  margin: 0;
+  padding: 0;
+  padding: 20px 0;
+  width: 100%;
+  text-align: center;
+  color: #298b52;
+  font-size: 38px;
+  font-weight: bolder;
+}
+
+#page19 img {
+  display: inline-block;
+  width: 70%;
+  border-radius: 5px;
+}
+
+#page19 .img {
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  flex-wrap: wrap;
+}
+
+#page19 .img>div {
+  width: 35%;
+  padding: 0 50px;
+}
+
+#page19 p {
+  margin: 10px;
+  text-align: center;
+  color: #6F8F7C;
+  font-size: 24px;
+  font-weight: bolder;
+}
+
+#page19 .scale {
+  cursor: pointer;
+  transition: .5s;
+}
+
+#page19 .scale:hover {
+  scale: 1.05;
 }
