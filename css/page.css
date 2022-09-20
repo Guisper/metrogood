@@ -198,6 +198,16 @@
   color: rgba(8, 77, 35, 1);
 }
 
+#page6 .container {
+  display: flex;
+  justify-content: center;
+}
+
+#page6 .container #bar1 {
+  width: 80%;
+  height: calc(100vh - 150px)
+}
+
 #page6 h2 {
   text-align: center;
   font-size: 28px;
@@ -318,14 +328,134 @@
   text-align: center;
   font-size: 32px;
   font-weight: 600;
-  color: rgba(34, 105, 186);
+  color: rgb(47, 136, 83);
+}
+
+#page9 span {
+  color: #084D23;
 }
 
 #page9 .desc p {
+  text-align: left;
   margin: 5px;
 }
 
 #page9 #bubble {
   width: 50%;
   height: 660px;
+}
+
+#page10 img {
+  width: 100%;
+}
+
+#page10 .lin {
+  width: 40%;
+  padding: 100px 0 0 100px;
+}
+
+#page10 .rin {
+  padding-top: 200px;
+  margin: 0 auto;
+  width: 1100px;
+}
+
+
+#page11 {
+  position: relative;
+  background-color: #d0cece;
+  height: 100% !important;
+}
+
+#page11 #cloudigyu {
+  position: absolute;
+  left: 30px;
+  top: 180px;
+  width: 30%;
+  height: 600px;
+  margin: 10px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgb(0 0 0 / 5%);
+  padding: 10px;
+  background-color: white;
+}
+
+#page11 .title {
+  position: absolute;
+  left: 15px;
+}
+
+#page11 .title h2 {
+  color: rgba(8, 77, 35);
+  font-size: 48px;
+  font-weight: bolder;
+}
+
+#page11 .box {
+  width: 60%;
+  margin-left: 30%;
+  height: 100vh;
+  display: flex;
+  flex-direction: row-reverse;
+  padding: 0 120px;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+#page11 .box .line {
+  width: 6px;
+  height: 100%;
+  background-color: #0f8b4d;
+  position: absolute;
+  left: 50%;
+  margin-left: -5px;
+}
+
+#page11 .box .item {
+  width: 50%;
+}
+
+#page11 .box .item h3 {
+  margin: 0;
+  padding: 0;
+  font-size: 28px;
+  font-weight: 400;
+  text-align: left;
+  color: #067c41;
+  border-bottom: 3px solid #0f8b4d;
+  position: relative;
+  white-space: nowrap;
+}
+
+#page11 .box .item p {
+  margin: 0;
+  padding: 10px;
+  font-size: 18px;
+  font-weight: 400;
+  text-align: left;
+  color: #2e6544;
+}
+
+#page12 h2 {
+  text-align: center;
+  font-size: 28px;
+  font-weight: 800;
+  color: rgba(8, 77, 35);
+}
+
+#page12 p {
+  margin: 0;
+  padding-bottom: 60px;
+  font-size: 24px;
+  font-weight: 600;
+  color: rgb(47, 136, 83);
+}
+
+#page12 .container {
+  justify-content: space-around;
+}
+
+#page12 .container>div {
+  width: 40%;
+  height: calc(100vh - 300px);
 }

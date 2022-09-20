@@ -85,7 +85,6 @@ const mapContainer = echarts.init(document.getElementById('mapContainer'))
 
 const barOption1 = {
   title: {
-    text: '中国内地城市地铁里程数和线路数',
   },
   tooltip: {
     trigger: 'axis',
@@ -453,7 +452,7 @@ const pieOption5 = {
   ]
 }
 
-pie5.setOption(pieOption5)
+// pie5.setOption(pieOption5)
 
 const pieOption6 = {
   title: {
@@ -510,7 +509,7 @@ const pieOption6 = {
   ]
 }
 
-pie6.setOption(pieOption6)
+// pie6.setOption(pieOption6)
 
 const barOption5 = {
   title: {
@@ -1027,8 +1026,110 @@ const cloudOption = {  //指定图表的配置项和数据
     ]  //data结束
   }]  //series结束
 }  //option结束
-cloud.setOption(cloudOption)  //为echarts对象加载数据 
 
+const cloudigyu = echarts.init(document.getElementById("cloudigyu"))
+const cloudOptionigyu = {  //指定图表的配置项和数据
+  title: {  //配置标题组件
+    text: '',
+    x: 'center', y: 15,
+    textStyle: {
+      color: 'green', fontSize: 22,
+    }
+  },
+  tooltip: { show: true },  //配置提示框组件
+  series: [{  //数据系列及其配置
+    name: '',  //设置名称
+    type: 'wordCloud',  //设置图表类型为字云图
+    size: ['80%', '80%'],  //设置显示的字云图的大小
+    textRotation: [0, 30, 45, 70, 90, 115, -20, -90],  //设置文字倾斜角度
+    textPadding: 3,  //设置文字之间的间距
+    autoSize: { enable: true, minSize: 5 },  //设置文字的自动大小
+    textStyle: {
+      color: function () {
+        return 'rgb(' + [
+          Math.round(Math.random() * 255),
+          Math.round(Math.random() * 255),
+          Math.round(Math.random() * 255)
+        ].join(',') + ')'
+      },
+      emphasis: {
+        shadowBlur: 26,
+        color: '#333',
+        shadowColor: '#ccc',
+        fontSize: 20
+      }
+    },
+    data: [
+      { name: '发展', value: 4 },
+      { name: '共建', value: 3 },
+      { name: '经济圈', value: 3 },
+      { name: '区域', value: 3 },
+      { name: '发挥', value: 3 },
+      { name: '统筹', value: 2 },
+      { name: '协调', value: 2 },
+      { name: '推进', value: 2 },
+      { name: '作用', value: 2 },
+      { name: '成渝', value: 2 },
+      { name: '地区', value: 2 },
+      { name: '双城', value: 2 },
+      { name: '建设', value: 2 },
+      { name: '便捷', value: 2 },
+      { name: '加强', value: 1 },
+      { name: '顶层', value: 1 },
+      { name: '设计', value: 1 },
+      { name: '牢固', value: 1 },
+      { name: '树立', value: 1 },
+      { name: '一体化', value: 1 },
+      { name: '理念', value: 1 },
+      { name: '双城记', value: 1 },
+      { name: '合力', value: 1 },
+      { name: '打造', value: 1 },
+      { name: '协作', value: 1 },
+      { name: '高水平', value: 1 },
+      { name: '样板', value: 1 },
+      { name: '时代', value: 1 },
+      { name: '西部', value: 1 },
+      { name: '开发', value: 1 },
+      { name: '支撑', value: 1 },
+      { name: '一带', value: 1 },
+      { name: '一路', value: 1 },
+      { name: '带动', value: 1 },
+      { name: '长江', value: 1 },
+      { name: '经济带', value: 1 },
+      { name: '绿色', value: 1 },
+      { name: '示范作用', value: 1 },
+      { name: '启动', value: 1 },
+      { name: '碳达峰', value: 1 },
+      { name: '联合行动', value: 1 },
+      { name: '建立', value: 1 },
+      { name: '财税', value: 1 },
+      { name: '协同', value: 1 },
+      { name: '机制', value: 1 },
+      { name: '全面', value: 1 },
+      { name: '提速', value: 1 },
+      { name: '推动', value: 1 },
+      { name: '合作', value: 1 },
+      { name: '深化', value: 1 },
+      { name: '实施', value: 1 },
+      { name: '一批', value: 1 },
+      { name: '生活', value: 1 },
+      { name: '行动', value: 1 },
+      { name: '通办', value: 1 },
+      { name: '事项', value: 1 },
+      { name: '提升', value: 1 },
+      { name: '群众', value: 1 },
+      { name: '办事', value: 1 },
+      { name: '一区', value: 1 },
+      { name: '两群', value: 1 },
+      { name: '持续', value: 1 },
+      { name: '释放', value: 1 },
+      { name: '经济', value: 1 },
+      { name: '布局', value: 1 },
+      { name: '优化', value: 1 },
+      { name: '效应', value: 1 },
+    ] //data结束
+  }]  //series结束
+}  //option结束
 
 const initBubbleChart = () => {
   let data = passengerFlowData.city.map((item, index) => ({
@@ -1110,4 +1211,12 @@ window.bar8 = bar8
 window.barOption8 = barOption8
 window.pie1 = pie1
 window.pieOption1 = pieOption1
+window.pie5 = pie5
+window.pieOption5 = pieOption5
+window.pie6 = pie6
+window.pieOption6 = pieOption6
+window.cloud = cloud
+window.cloudOption = cloudOption
+window.cloudigyu = cloudigyu
+window.cloudOptionigyu = cloudOptionigyu
 window.initBubbleChart = initBubbleChart
