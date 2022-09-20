@@ -3,7 +3,9 @@ const ani = (query, dire = 0, delay = 0) => {
   setTimeout(() => document.querySelector(query).classList.add('animate__animated', direction[dire], 'active'), delay)
 }
 window.onload = () => {
-  const scrollPage = new ScrollPage('#main-page')
+  const scrollPage = new ScrollPage('#main-page',{
+    
+  })
   window.scrollPage = scrollPage
   scrollPage.on('page2', () => {
     ani('#page2 .lin', 0, 200)
